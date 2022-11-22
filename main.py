@@ -6,7 +6,8 @@ import time
 
 message = "Hello, choose either 'add','show', 'edit' , 'complete' or 'exit' :"
 now = time.strftime('%B %d %Y %I:%M:%S %p')
-print("It is currently ",now)
+#Leedleleedle
+print("It is currently ", now)
 
 while 1:
 
