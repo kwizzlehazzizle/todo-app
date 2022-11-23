@@ -1,4 +1,5 @@
 /venv/
+**.OLD/
 .idea
-Bonus
+OLD/Bonus
 Excercises
