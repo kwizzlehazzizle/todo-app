@@ -1,4 +1,4 @@
-FILE_PATH = 'Files/todos.txt'
+FILE_PATH = 'todos.txt'
 """ The File Path """
 def get_todos(todosfilepath = FILE_PATH  ):
     """ Opens the file containing the to-do list for reading

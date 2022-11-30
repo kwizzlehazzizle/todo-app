@@ -1,10 +1,19 @@
 from Modules import functions
 import PySimpleGUI as sg
 import time
+import os
+
+if not os.path.exists(functions.FILE_PATH):
+    with open(functions.FILE_PATH,'w') as file:
+        pass
+
+#To make an executable:
+#pyinstaller --onefile --windowed --clean gui.py
 
 #sg.theme("DarkAmber")
 #sg.theme("DarkPurple4")
-sg.theme("Black")
+#sg.theme("Black")
+sg.theme("DarkBlue4")
 
 clock = sg.Text('',key="clock")
 label = sg.Text("Type in a todo")
@@ -30,8 +39,8 @@ while 1:
 
     event, values = window.read(timeout=1000)#milliseconds
     window["clock"].update(value=time.strftime('%B %d %Y %I:%M:%S %p'))
-    #print("Event: ", event)
-    #print("Values: ", values)
+    print("Event: ", event)
+    print("Values: ", values)
     match event:
         case "Add":
             todos = functions.get_todos()
